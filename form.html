@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <div>
+        
+        <form action="">
+            <fieldset>
+                <legend>Enquiry</legend>
+            Name: <input type="text" maxlength="15" placeholder="Name" required="" autofocus=""><br><br>
+            Address: <textarea name="" id="" cols="20" rows="5" maxlength="50"></textarea><br>
+            Gender: <input type="radio" value="M" name="gender"> Male
+            <input type="radio" value="F" name="gender"> Female <br>
+            Age: <input type="number" min="18" max="30"><br>
+            Country: <select name="" id="">
+                <optgroup label="India">
+                <option value="">Bihar</option>
+                <option value="">Delhi</option>
+            </optgroup>
+            </select><br>
+            Hobbies: <input type="checkbox" name="hobby[]"> Cooking
+            <input type="checkbox" name="hobby[]" checked> Cricket
+            <br>
+            Image: <input type="file">
+            <br>
+            Color: <input type="color"><br>
+            Text: <input type="hidden"><br>
+            Date: <input type="date"><br>
+            Date-Time: <input type="datetime-local"><br>
+            Range: <input type="range"><br>
+            <input type="submit">
+            <input type="reset">
+        </fieldset>
+        </form>
+    </div>
+</body>
+</html>
