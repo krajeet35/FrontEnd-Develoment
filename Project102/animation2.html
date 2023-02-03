@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #main{
+            width: 500px;
+            height: 200px;
+            border: 1px solid;
+            margin: auto;
+            position: relative;
+            
+        }
+        #box{
+            width: 100px ;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            animation: box 5s infinite alternate;
+            animation-timing-function: ease;
+
+        }
+        @keyframes box {
+            from{
+                left: 0px;
+            }
+            to{
+                left: 450px;
+                background-color: purple;
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun and Cloud Animation</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #main{
+            width: 700px;
+            height: 200px;
+            border: 1px solid;
+            margin: auto;
+            position: relative;
+        }
+        #sun{
+            width: 100px;
+            height: 100px;
+            /* border: 1px solid; */
+            border-radius: 50%;
+            background-color: yellow;
+            position: absolute;
+            top: 50px;
+            animation: sun 5s infinite alternate ease;
+        }
+        .cloud1{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0px;
+            left: 150px;
+            opacity: 0.6;
+            animation: cloud1 5s infinite alternate ease;
+        }
+        .cloud2{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0px;
+            left: 400px;
+            opacity: 0.6;
+            animation: cloud2 5s infinite alternate ease;
+        }
+        .cloud3{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0px;
+            left: 580px;
+            opacity: 0.6;
+            animation: cloud3 5s infinite alternate ease;
+        }
+        .cloud>img{
+            width: 100%;
+            height: 100%;
+            
+        }
+        @keyframes sun{
+            from{
+                left: 0px;
+                background-color: red;
+            }
+            to{
+                left: 600px;
+                background-color: yellow;
+            }
+        }
+        @keyframes cloud1{
+            from{
+                left: 150px;
+            }
+            to{
+                left: 0px;
+            }
+        }
+        @keyframes cloud2{
+            from{
+                left: 400px;
+            }
+            to{
+                left: 150px;
+            }
+        }
+        @keyframes cloud3{
+            from{
+                left: 580px;
+            }
+            to{
+                left: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="sun"></div>
+        <div class="cloud1 cloud">
+            <img src="https://th.bing.com/th/id/R.9a92c8ab1ff98d4e481db26aad891f6c?rik=sH0%2bkXrTR14Q2w&riu=http%3a%2f%2fimages.clipartpanda.com%2fcloud-clip-art-rgtaylor_csc_net_wan_cloud.png&ehk=fUTpEgFYst3e50jWfwoZz3x4jBfzNZGlgUedhkpebSc%3d&risl=&pid=ImgRaw&r=0" alt="Cloud">
+        </div>
+        <div class="cloud2 cloud">
+            <img src="https://th.bing.com/th/id/R.9a92c8ab1ff98d4e481db26aad891f6c?rik=sH0%2bkXrTR14Q2w&riu=http%3a%2f%2fimages.clipartpanda.com%2fcloud-clip-art-rgtaylor_csc_net_wan_cloud.png&ehk=fUTpEgFYst3e50jWfwoZz3x4jBfzNZGlgUedhkpebSc%3d&risl=&pid=ImgRaw&r=0" alt="Cloud">
+        </div>
+        <div class="cloud3 cloud">
+            <img src="https://th.bing.com/th/id/R.9a92c8ab1ff98d4e481db26aad891f6c?rik=sH0%2bkXrTR14Q2w&riu=http%3a%2f%2fimages.clipartpanda.com%2fcloud-clip-art-rgtaylor_csc_net_wan_cloud.png&ehk=fUTpEgFYst3e50jWfwoZz3x4jBfzNZGlgUedhkpebSc%3d&risl=&pid=ImgRaw&r=0" alt="Cloud">
+        </div>
+    </div>
+</body>
+</html>
