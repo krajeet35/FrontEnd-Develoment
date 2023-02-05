@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #box{
+            width: 300px;
+            height: 400px;
+            /* border: 1px solid; */
+            margin: auto;
+            display: grid;
+            gap: 5px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 20px 10px;
+        }
+        .input{
+            width: 100%;
+            height: 50px;
+            /* border: 1px solid; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #operator{
+            width: 50%;
+            height: 50px;
+            margin: auto;
+            font-size: 30px;
+            background-color: whitesmoke;
+            border: none;
+
+        }
+        #box>div:first-child{
+            background-color: aquamarine;
+            color: black;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        #box>div:last-child{
+            background-color: green;
+            cursor: pointer;
+        }
+        #calc{
+            background-color: blue;
+            cursor: pointer;
+        }
+        #in1{
+            color: black;
+            
+        }
+        #in2{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="input"></div>
+        <input type="number" class="input" id="in1" placeholder="Enter first value">
+        <select name="" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        
+        </select>
+        <input type="number" class="input" id="in2" placeholder="Enter Second value">
+        <div class="input" id="calc">Calculate</div>
+        <div class="input" id="clr">Clear</div>
+    </div>
+</body>
+</html>
+<script>
+    let calc= document.querySelector("#calc");
+    
+    calc.addEventListener("click", function(){
+        event.preventDefault();
+        let result=document.querySelector(".input");
+        result.innerHTML="";
+        let val1=document.querySelector("#in1").value;
+        let val2=document.querySelector("#in2").value;
+        let val3=document.querySelector("#operator").value;
+        val1=parseInt(val1);
+        val2=parseInt(val2);
+        console.log(val1,val2);
+        if(val3=="+"){
+            result.innerHTML=val1+val2;
+        }
+        else if(val3=="-"){
+            result.innerHTML=val1-val2;
+        }
+        else if(val3=="*"){
+            result.innerHTML=val1*val2;
+        }
+        else{
+            result.innerHTML=val1/val2;
+        }
+    });
+
+    let clr= document.querySelector("#clr");
+    clr.addEventListener("click", ()=>{
+        let result=document.querySelector(".input").innerHTML="";
+        let val1=document.querySelector("#in1").value="";
+        let val2=document.querySelector("#in2").value="";
+    })
+</script>
