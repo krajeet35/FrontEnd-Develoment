@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print the page</title>
+</head>
+<body id="body">
+    <div id="main2">
+        <div id="data">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores, dolorum assumenda corporis delectus omnis ducimus alias, explicabo neque nulla error cumque autem aliquam voluptas pariatur quae reiciendis fugit ipsa!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates commodi maiores tempore, culpa, aperiam reiciendis voluptatibus aliquid quisquam aliquam, illum provident odio corrupti expedita praesentium veritatis impedit deserunt itaque ab.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet maxime voluptate praesentium rerum molestiae debitis neque, ipsam asperiores distinctio unde quidem impedit optio totam! At temporibus eum impedit repellat et.
+        </div>
+        <button id="main">Print</button>
+    </div>
+</body>
+</html>
+<script>
+    let main=document.querySelector("#main");
+    main.addEventListener("click",()=>{
+        let body=document.querySelector("#body").innerHTML;
+        let data=document.querySelector("#data").innerHTML;
+        document.querySelector("#body").innerHTML=data;
+        window.print();
+        document.querySelector("#body").innerHTML=body;
+    });
+    
+     
+</script>
