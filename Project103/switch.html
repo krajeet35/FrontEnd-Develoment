@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+    <style>
+        #box{
+            width: 500px;
+            height: 200px;
+            background-color: green;
+            margin: auto;
+            border-radius: 10px;
+            display: grid;
+            gap: 20px;
+        }
+        #main{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 5px;
+        }
+        #main>button{
+            width: 20%;
+            border: none;
+            border-radius: 10px;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        #main>input{
+            width: 50%;
+            border-radius: 10px;
+            border: none;
+            
+        }
+        #result{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
+<script>
+    let box=document.querySelector("#box");
+    let main=document.createElement("div");
+    main.setAttribute("id","main");
+    let in1=document.createElement("input");
+    in1.type="Number";
+    
+    let btn=document.createElement("button");
+    btn.innerText="Submit";
+    main.append(in1,btn);
+    let result=document.createElement("div");
+    result.setAttribute("id","result");
+    box.append(main,result);
+    
+    btn.addEventListener("click",()=>{
+        let x=in1.value;
+        x=parseInt(x);
+        switch(x){
+            case 1: result.innerHTML="Monday";
+            
+                    break;
+            case 2: result.innerHTML="Tuesday";
+                    break;
+            case 3: result.innerHTML="Wednesday";
+                    break;
+            case 4: result.innerHTML="Thursday";
+                    break;
+            case 5: result.innerHTML="Friday";
+                    break;
+            case 6: result.innerHTML="Saturday";
+                    break;
+            case 7: result.innerHTML="Sunday";
+                    break;
+            default: result.innerHTML="Invalid Input";
+                     break;
+        }
+    });
+
+    
+</script>
