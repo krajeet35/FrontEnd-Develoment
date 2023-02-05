@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Events</title>
+    <style>
+        #main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            font-size: 25px;
+            font-weight: bolder;
+            cursor: pointer;
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div onmouseenter="modify()" onmouseleave="unmodify()" id="main">Ajeet Roy</div>    
+</body>
+</html>
+<script>
+    function modify(){
+        let main= document.querySelector("#main");
+        main.style.fontSize="80px";
+        main.style.color="red";
+    }
+    function unmodify(){
+        let main= document.querySelector("#main");
+        main.style.fontSize="40px";
+        main.style.color="purple";
+    }
+</script>

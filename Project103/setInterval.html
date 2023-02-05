@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval</title>
+    <style>
+        #main{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: whitesmoke;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+</body>
+</html>
+<script>
+    let i=0;
+    let x=setInterval(()=>{
+        let result=document.querySelector("#main").innerHTML=i++;
+        if(i==4){
+        // clearInterval(x);
+    }
+    },1000);
+    window.setTimeout(()=>{
+        alert("One Minute completed.");
+        i=0;
+    },62000);
+    
+</script> 

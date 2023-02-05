@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open and Close of a Window</title>
+</head>
+<body>
+    <button onclick="Open()">Open</button>
+    <button onclick="close1()">Close</button>
+</body>
+</html>
+<script>
+    let win1;
+    function Open(){
+        win1=window.open("https://krajeet35.github.io/","width=500px","height=400px");
+    }
+    function close1(){
+        win1.close();
+    }
+</script>
