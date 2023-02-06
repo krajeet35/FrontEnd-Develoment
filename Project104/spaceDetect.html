@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space find and show message</title>
+</head>
+<body>
+    <div id="main">
+        <input type="text" id="in1" onkeyup="Space(this.value)">
+        <button id="btn1">Submit</button>
+        <p id="res"></p>
+    </div>
+</body>
+</html>
+<script>
+    let res = document.querySelector("#res");
+    let pattern=/\s/g;
+    
+    function Space(data){
+        let x= pattern.test(data);
+        if(x){
+            res.innerHTML="Space Not Allowed";
+            res.style.color="orange";
+        }
+        else{
+            res.innerHTML="";
+        }
+    }
+    let btn= document.querySelector("#btn1");
+        btn.addEventListener("click",()=>{
+            let data2=document.querySelector("#in1").value;
+            let x=pattern.test(data2);
+            if(x){
+                res.innerHTML= "Space Not Allowed here";
+            }
+            else{
+                alert("Submmited!");
+                res.innerHTML="";
+            }
+        })
+</script>
