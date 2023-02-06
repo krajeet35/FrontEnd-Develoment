@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print table of User Input number</title>
+    <style>
+        #main{
+            width: 300px;
+            height: 400px;
+            /* border: 1px solid; */
+            display: grid;
+            grid-template: auto/repeat(3,auto);
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            
+        }
+        #main>div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box{
+            width: 300px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: bolder;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="main"></div>
+</body>
+</html>
+<script>
+    let main=document.querySelector("#main");
+        let num=prompt("Enter a number");
+        document.querySelector("#box").innerHTML="The table of "+num;
+        for(let i=1;i<=10;i++){
+            let div1=document.createElement("div");
+            div1.innerHTML= num+" x "+i;
+            div1.style.backgroundColor="blue";
+            div1.style.borderRadius="10px";
+            let div2=document.createElement("div");
+            div2.innerHTML=" = ";
+            div2.style.backgroundColor="purple";
+            div2.style.borderRadius="10px";
+            let div3=document.createElement("div");
+            div3.innerHTML= num*i;
+            div3.style.backgroundColor="teal";
+            div3.style.borderRadius="10px";
+            main.append(div1,div2,div3);
+        }
+
+</script>

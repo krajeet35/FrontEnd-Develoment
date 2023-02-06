@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation using JavaScript</title>
+    <style>
+        #main{
+            width: 500px;
+            height: 300px;
+            margin: auto;
+            background-color: teal;
+            border-radius: 10px;
+            position: relative;
+        }
+        #sub1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 10px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: 1s;
+            animation-timing-function: ease;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="main">
+        <div id="sub1"></div>
+    </div>
+    <button onclick="move1()" id="btn1">Start</button>
+</body>
+</html>
+<script>
+    // let btn2=document.querySelector("#btn1");
+    // btn2.addEventListener("Click",move1());
+
+    function move1(){
+         let sub=document.querySelector("#sub1");
+         let t=0, l=0;
+         let n = setInterval(animate,5);
+         function animate(){
+            t++;
+            l=l+2;
+            sub.style.top= t+"px";
+            sub.style.left= l+"px";
+            if(t==200){
+                clearInterval(n);
+            }
+            if(l==400){
+                clearInterval(n);
+            }
+         }
+    }
+</script>

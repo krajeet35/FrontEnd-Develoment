@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling with try catch</title>
+</head>
+<body>
+    <div id="main"></div>
+</body>
+</html>
+<script>
+    let main=document.querySelector("#main");
+    let x="ajeeT";
+    // let x=10;
+    try {
+        // alertm(x);
+        x = x.toUpperCase();
+        main.innerHTML=x;
+    } catch (error) {
+        main.innerHTML=error
+    }
+</script>
