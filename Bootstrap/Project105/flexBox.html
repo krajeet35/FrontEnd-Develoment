@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlexBox ih Bootstrap</title>
     <link rel="stylesheet" href="/Bootstrap/css/bootstrap.min.css">
+    <style>
+        #box1{
+            /* width: 200px; */
+            height: 200px;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid bg-primary">
-        <div class="row">
-            <div>div1</div>
-            <div>div2</div>
-            <div>div3</div>
-            <div>div4</div>
-            <div>div5</div>
+        <div id="box1" class="row justify-content-around">
+            <div class="col-3 bg-secondary align-self-start">div1</div>
+            <div class="col-2 bg-secondary-subtle align-self-end">div2</div>
+            <div class="col-3 bg-dark text-white align-self-center">div3</div>
+            <div class="col-2 bg-warning">div4</div>
+            <div class="col-1 bg-danger align-self-end">div5</div>
         </div>
     </div>
 
