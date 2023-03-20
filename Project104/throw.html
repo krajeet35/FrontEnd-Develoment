@@ -11,17 +11,23 @@
 </body>
 </html>
 <script>
-    let main=document.querySelector("#main");
-    let num=-1;
-    try {
-        if(num<0){
-            throw("Enter a valid number");
-        }
-        else{
-            main.innerHTML=num;
-        }
+    // let main=document.querySelector("#main");
+    // let num=-1;
+    // try {
+    //     if(num<0){
+    //         throw("Enter a valid number");
+    //     }
+    //     else{
+    //         main.innerHTML=num;
+    //     }
         
-    } catch (error) {
-        main.innerHTML=error;
-    }
+    // } catch (error) {
+    //     main.innerHTML=error;
+    // }
+
+    for (var i = 0; i < 3; i++) {
+
+setTimeout(function() { alert(i); }, 1000 + i);
+
+}
 </script>
